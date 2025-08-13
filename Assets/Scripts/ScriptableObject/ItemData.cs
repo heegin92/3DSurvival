@@ -40,6 +40,9 @@ public class ItemData : ScriptableObject
 
     [Header("Consumable")]
     public ItemDataConSumable[] consumables;
+    public bool isCoroutine; // 코루틴을 사용할지 여부를 결정하는 변수 추가
+    public float coroutineInterval = 0.5f; // 코루틴 간격 변수 추가
+    public int coroutineCount = 3; // 코루틴 횟수 변수 추가
 
     [Header("Equip")]
     public GameObject equipPrefab;

@@ -192,20 +192,37 @@ public class UIInventory : MonoBehaviour
 
     public void OnUseButton()
     {
-        if(selectedItem.type == ItemType.Consumable)
+        if (selectedItem.type == ItemType.Consumable)
+        {
+            if (selectedItem.isCoroutine) // 코루틴 아이템인지 확인
             {
-            for (int i = 0; i <= selectedItem.consumables.Length; ++i)
+                // 코루틴 시작 전 로그
+                Debug.Log($"코루틴 회복 아이템 사용! {selectedItem.displayName} 효과 시작.");
+
+                // ApplyConsumableEffectsOverTime 코루틴을 시작하고, 
+                // 아이템의 모든 효과 배열을 전달
+                StartCoroutine(condition.ApplyConsumableEffectsOverTime(
+                    selectedItem.consumables,
+                    selectedItem.coroutineCount,
+                    selectedItem.coroutineInterval)
+                );
+            }
+            else // 일반 아이템이라면, 기존 로직 실행
             {
-                switch (selectedItem.consumables[i].type)
+                for (int i = 0; i < selectedItem.consumables.Length; ++i)
                 {
-                    case ConsumableType.Health:
-                        condition.Health(selectedItem.consumables[i].value);
-                        break;
-                    case ConsumableType.Hunger:
-                        condition.Eat(selectedItem.consumables[i].value);
-                        break;
+                    switch (selectedItem.consumables[i].type)
+                    {
+                        case ConsumableType.Health:
+                            condition.Health(selectedItem.consumables[i].value);
+                            break;
+                        case ConsumableType.Hunger:
+                            condition.Eat(selectedItem.consumables[i].value);
+                            break;
+                    }
                 }
             }
+
             RemoveSelectedItem();
         }
     }
