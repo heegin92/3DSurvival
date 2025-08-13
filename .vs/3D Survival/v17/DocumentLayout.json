@@ -1,0 +1,441 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\unitywork\\3D Survival\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F1C35FA6-607C-F7A4-E572-A7039DD56339}|Assembly-CSharp.csproj|d:\\unitywork\\3d survival\\assets\\scripts\\player\\playerattack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1C35FA6-607C-F7A4-E572-A7039DD56339}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playerattack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1C35FA6-607C-F7A4-E572-A7039DD56339}|Assembly-CSharp.csproj|d:\\unitywork\\3d survival\\assets\\scripts\\scriptableobject\\itemdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1C35FA6-607C-F7A4-E572-A7039DD56339}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\scriptableobject\\itemdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1C35FA6-607C-F7A4-E572-A7039DD56339}|Assembly-CSharp.csproj|D:\\unitywork\\3D Survival\\assets\\scripts\\npc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1C35FA6-607C-F7A4-E572-A7039DD56339}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\npc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1C35FA6-607C-F7A4-E572-A7039DD56339}|Assembly-CSharp.csproj|D:\\unitywork\\3D Survival\\assets\\scripts\\player\\playercondition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1C35FA6-607C-F7A4-E572-A7039DD56339}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playercondition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1C35FA6-607C-F7A4-E572-A7039DD56339}|Assembly-CSharp.csproj|D:\\unitywork\\3D Survival\\assets\\scripts\\player\\charactermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1C35FA6-607C-F7A4-E572-A7039DD56339}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\charactermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1C35FA6-607C-F7A4-E572-A7039DD56339}|Assembly-CSharp.csproj|D:\\unitywork\\3D Survival\\assets\\scripts\\player\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1C35FA6-607C-F7A4-E572-A7039DD56339}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1C35FA6-607C-F7A4-E572-A7039DD56339}|Assembly-CSharp.csproj|D:\\unitywork\\3D Survival\\assets\\scripts\\player\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1C35FA6-607C-F7A4-E572-A7039DD56339}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1C35FA6-607C-F7A4-E572-A7039DD56339}|Assembly-CSharp.csproj|D:\\unitywork\\3D Survival\\assets\\scripts\\player\\interaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1C35FA6-607C-F7A4-E572-A7039DD56339}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\interaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1C35FA6-607C-F7A4-E572-A7039DD56339}|Assembly-CSharp.csproj|D:\\unitywork\\3D Survival\\assets\\scripts\\item\\equiptool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1C35FA6-607C-F7A4-E572-A7039DD56339}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\item\\equiptool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1C35FA6-607C-F7A4-E572-A7039DD56339}|Assembly-CSharp.csproj|D:\\unitywork\\3D Survival\\assets\\scripts\\player\\equipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1C35FA6-607C-F7A4-E572-A7039DD56339}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\equipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1C35FA6-607C-F7A4-E572-A7039DD56339}|Assembly-CSharp.csproj|D:\\unitywork\\3D Survival\\assets\\scripts\\item\\resource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1C35FA6-607C-F7A4-E572-A7039DD56339}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\item\\resource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1C35FA6-607C-F7A4-E572-A7039DD56339}|Assembly-CSharp.csproj|D:\\unitywork\\3D Survival\\assets\\scripts\\item\\itemobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1C35FA6-607C-F7A4-E572-A7039DD56339}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\item\\itemobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1C35FA6-607C-F7A4-E572-A7039DD56339}|Assembly-CSharp.csproj|D:\\unitywork\\3D Survival\\assets\\scripts\\item\\equip.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1C35FA6-607C-F7A4-E572-A7039DD56339}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\item\\equip.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1C35FA6-607C-F7A4-E572-A7039DD56339}|Assembly-CSharp.csproj|D:\\unitywork\\3D Survival\\assets\\scripts\\musiczone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1C35FA6-607C-F7A4-E572-A7039DD56339}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\musiczone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1C35FA6-607C-F7A4-E572-A7039DD56339}|Assembly-CSharp.csproj|D:\\unitywork\\3D Survival\\assets\\scripts\\player\\footsteps.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1C35FA6-607C-F7A4-E572-A7039DD56339}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\footsteps.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1C35FA6-607C-F7A4-E572-A7039DD56339}|Assembly-CSharp.csproj|D:\\unitywork\\3D Survival\\assets\\scripts\\ui\\uiinventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1C35FA6-607C-F7A4-E572-A7039DD56339}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\uiinventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1C35FA6-607C-F7A4-E572-A7039DD56339}|Assembly-CSharp.csproj|D:\\unitywork\\3D Survival\\assets\\scripts\\campfire.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1C35FA6-607C-F7A4-E572-A7039DD56339}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\campfire.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1C35FA6-607C-F7A4-E572-A7039DD56339}|Assembly-CSharp.csproj|D:\\unitywork\\3D Survival\\assets\\scripts\\ui\\itemslot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1C35FA6-607C-F7A4-E572-A7039DD56339}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\itemslot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\unitywork\\3D Survival\\Assets\\Scripts\\PlayerController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\PlayerController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1C35FA6-607C-F7A4-E572-A7039DD56339}|Assembly-CSharp.csproj|D:\\unitywork\\3D Survival\\assets\\scripts\\ui\\damageindicator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1C35FA6-607C-F7A4-E572-A7039DD56339}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\damageindicator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1C35FA6-607C-F7A4-E572-A7039DD56339}|Assembly-CSharp.csproj|D:\\unitywork\\3D Survival\\assets\\scripts\\daynightcycle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1C35FA6-607C-F7A4-E572-A7039DD56339}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\daynightcycle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\unitywork\\3D Survival\\Assets\\Scripts\\PlayerCondition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\PlayerCondition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1C35FA6-607C-F7A4-E572-A7039DD56339}|Assembly-CSharp.csproj|D:\\unitywork\\3D Survival\\assets\\scripts\\ui\\condition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1C35FA6-607C-F7A4-E572-A7039DD56339}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\condition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1C35FA6-607C-F7A4-E572-A7039DD56339}|Assembly-CSharp.csproj|D:\\unitywork\\3D Survival\\assets\\scripts\\ui\\uicondition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1C35FA6-607C-F7A4-E572-A7039DD56339}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\uicondition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\unitywork\\3D Survival\\Assets\\Scripts\\CharacterManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\CharacterManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\unitywork\\3D Survival\\Assets\\Scripts\\Player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PlayerAttack.cs",
+              "DocumentMoniker": "D:\\unitywork\\3D Survival\\Assets\\Scripts\\Player\\PlayerAttack.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerAttack.cs",
+              "ToolTip": "D:\\unitywork\\3D Survival\\Assets\\Scripts\\Player\\PlayerAttack.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player\\PlayerAttack.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwCwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-12T23:00:29.848Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "NPC.cs",
+              "DocumentMoniker": "D:\\unitywork\\3D Survival\\Assets\\Scripts\\NPC.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\NPC.cs",
+              "ToolTip": "D:\\unitywork\\3D Survival\\Assets\\Scripts\\NPC.cs",
+              "RelativeToolTip": "Assets\\Scripts\\NPC.cs",
+              "ViewState": "AgIAAJMAAAAAAAAAAAAnwJoAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-12T11:00:42.863Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Resource.cs",
+              "DocumentMoniker": "D:\\unitywork\\3D Survival\\Assets\\Scripts\\Item\\Resource.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Item\\Resource.cs",
+              "ToolTip": "D:\\unitywork\\3D Survival\\Assets\\Scripts\\Item\\Resource.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Item\\Resource.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-12T02:05:43.17Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Player.cs",
+              "DocumentMoniker": "D:\\unitywork\\3D Survival\\Assets\\Scripts\\Player\\Player.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\Player.cs",
+              "ToolTip": "D:\\unitywork\\3D Survival\\Assets\\Scripts\\Player\\Player.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player\\Player.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-08T20:29:08.265Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PlayerController.cs",
+              "DocumentMoniker": "D:\\unitywork\\3D Survival\\Assets\\Scripts\\Player\\PlayerController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerController.cs",
+              "ToolTip": "D:\\unitywork\\3D Survival\\Assets\\Scripts\\Player\\PlayerController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player\\PlayerController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-08T21:32:23.797Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Interaction.cs",
+              "DocumentMoniker": "D:\\unitywork\\3D Survival\\Assets\\Scripts\\Player\\Interaction.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\Interaction.cs",
+              "ToolTip": "D:\\unitywork\\3D Survival\\Assets\\Scripts\\Player\\Interaction.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player\\Interaction.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-08T20:32:45.313Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "EquipTool.cs",
+              "DocumentMoniker": "D:\\unitywork\\3D Survival\\Assets\\Scripts\\Item\\EquipTool.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Item\\EquipTool.cs",
+              "ToolTip": "D:\\unitywork\\3D Survival\\Assets\\Scripts\\Item\\EquipTool.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Item\\EquipTool.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAgwBMAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-11T09:34:22.389Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CharacterManager.cs",
+              "DocumentMoniker": "D:\\unitywork\\3D Survival\\Assets\\Scripts\\Player\\CharacterManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\CharacterManager.cs",
+              "ToolTip": "D:\\unitywork\\3D Survival\\Assets\\Scripts\\Player\\CharacterManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player\\CharacterManager.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAADgvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-12T12:39:40.361Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Equip.cs",
+              "DocumentMoniker": "D:\\unitywork\\3D Survival\\Assets\\Scripts\\Item\\Equip.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Item\\Equip.cs",
+              "ToolTip": "D:\\unitywork\\3D Survival\\Assets\\Scripts\\Item\\Equip.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Item\\Equip.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-11T09:33:29.804Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ItemObject.cs",
+              "DocumentMoniker": "D:\\unitywork\\3D Survival\\Assets\\Scripts\\Item\\ItemObject.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Item\\ItemObject.cs",
+              "ToolTip": "D:\\unitywork\\3D Survival\\Assets\\Scripts\\Item\\ItemObject.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Item\\ItemObject.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAgwBUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-08T05:13:20.237Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Equipment.cs",
+              "DocumentMoniker": "D:\\unitywork\\3D Survival\\Assets\\Scripts\\Player\\Equipment.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\Equipment.cs",
+              "ToolTip": "D:\\unitywork\\3D Survival\\Assets\\Scripts\\Player\\Equipment.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player\\Equipment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-11T09:43:30.311Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ItemData.cs",
+              "DocumentMoniker": "D:\\unitywork\\3D Survival\\Assets\\Scripts\\ScriptableObject\\ItemData.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\ScriptableObject\\ItemData.cs",
+              "ToolTip": "D:\\unitywork\\3D Survival\\Assets\\Scripts\\ScriptableObject\\ItemData.cs",
+              "RelativeToolTip": "Assets\\Scripts\\ScriptableObject\\ItemData.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwCEAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-11T09:28:56.524Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PlayerCondition.cs",
+              "DocumentMoniker": "D:\\unitywork\\3D Survival\\Assets\\Scripts\\Player\\PlayerCondition.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerCondition.cs",
+              "ToolTip": "D:\\unitywork\\3D Survival\\Assets\\Scripts\\Player\\PlayerCondition.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player\\PlayerCondition.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAqwDoAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-12T05:59:22.404Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "UIInventory.cs",
+              "DocumentMoniker": "D:\\unitywork\\3D Survival\\Assets\\Scripts\\UI\\UIInventory.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\UIInventory.cs",
+              "ToolTip": "D:\\unitywork\\3D Survival\\Assets\\Scripts\\UI\\UIInventory.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UI\\UIInventory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-10T06:39:48.241Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "CampFire.cs",
+              "DocumentMoniker": "D:\\unitywork\\3D Survival\\Assets\\Scripts\\CampFire.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\CampFire.cs",
+              "ToolTip": "D:\\unitywork\\3D Survival\\Assets\\Scripts\\CampFire.cs",
+              "RelativeToolTip": "Assets\\Scripts\\CampFire.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-12T12:30:38.594Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "FootSteps.cs",
+              "DocumentMoniker": "D:\\unitywork\\3D Survival\\Assets\\Scripts\\Player\\FootSteps.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\FootSteps.cs",
+              "ToolTip": "D:\\unitywork\\3D Survival\\Assets\\Scripts\\Player\\FootSteps.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player\\FootSteps.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-12T13:31:04.554Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "MusicZone.cs",
+              "DocumentMoniker": "D:\\unitywork\\3D Survival\\Assets\\Scripts\\MusicZone.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\MusicZone.cs",
+              "ToolTip": "D:\\unitywork\\3D Survival\\Assets\\Scripts\\MusicZone.cs",
+              "RelativeToolTip": "Assets\\Scripts\\MusicZone.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwCYAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-12T13:42:09.21Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ItemSlot.cs",
+              "DocumentMoniker": "D:\\unitywork\\3D Survival\\Assets\\Scripts\\UI\\ItemSlot.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\ItemSlot.cs",
+              "ToolTip": "D:\\unitywork\\3D Survival\\Assets\\Scripts\\UI\\ItemSlot.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UI\\ItemSlot.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAmwDsAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-10T06:40:10.514Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "DamageIndicator.cs",
+              "DocumentMoniker": "D:\\unitywork\\3D Survival\\Assets\\Scripts\\UI\\DamageIndicator.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\DamageIndicator.cs",
+              "ToolTip": "D:\\unitywork\\3D Survival\\Assets\\Scripts\\UI\\DamageIndicator.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UI\\DamageIndicator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-08T20:06:26.282Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "DayNightCycle.cs",
+              "DocumentMoniker": "D:\\unitywork\\3D Survival\\Assets\\Scripts\\DayNightCycle.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\DayNightCycle.cs",
+              "ToolTip": "D:\\unitywork\\3D Survival\\Assets\\Scripts\\DayNightCycle.cs",
+              "RelativeToolTip": "Assets\\Scripts\\DayNightCycle.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAA3wCMAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-07T11:39:55.677Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "PlayerCondition.cs",
+              "DocumentMoniker": "D:\\unitywork\\3D Survival\\Assets\\Scripts\\PlayerCondition.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerCondition.cs",
+              "ToolTip": "D:\\unitywork\\3D Survival\\Assets\\Scripts\\PlayerCondition.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerCondition.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-07T01:39:50.843Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "UICondition.cs",
+              "DocumentMoniker": "D:\\unitywork\\3D Survival\\Assets\\Scripts\\UI\\UICondition.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\UICondition.cs",
+              "ToolTip": "D:\\unitywork\\3D Survival\\Assets\\Scripts\\UI\\UICondition.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UI\\UICondition.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvxAAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-07T01:38:42.303Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Condition.cs",
+              "DocumentMoniker": "D:\\unitywork\\3D Survival\\Assets\\Scripts\\UI\\Condition.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\Condition.cs",
+              "ToolTip": "D:\\unitywork\\3D Survival\\Assets\\Scripts\\UI\\Condition.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UI\\Condition.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwCQAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-07T01:00:54.301Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "PlayerController.cs",
+              "DocumentMoniker": "D:\\unitywork\\3D Survival\\Assets\\Scripts\\PlayerController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerController.cs",
+              "ToolTip": "D:\\unitywork\\3D Survival\\Assets\\Scripts\\PlayerController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerController.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAUwDoAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-06T10:14:18.366Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "CharacterManager.cs",
+              "DocumentMoniker": "D:\\unitywork\\3D Survival\\Assets\\Scripts\\CharacterManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\CharacterManager.cs",
+              "ToolTip": "D:\\unitywork\\3D Survival\\Assets\\Scripts\\CharacterManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\CharacterManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-06T06:36:13.477Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Player.cs",
+              "DocumentMoniker": "D:\\unitywork\\3D Survival\\Assets\\Scripts\\Player.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player.cs",
+              "ToolTip": "D:\\unitywork\\3D Survival\\Assets\\Scripts\\Player.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-06T06:44:49.572Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

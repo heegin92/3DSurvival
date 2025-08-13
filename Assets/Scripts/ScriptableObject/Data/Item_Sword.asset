@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46da364988789964f9ee46691b09bd54, type: 3}
+  m_Name: Item_Sword
+  m_EditorClassIdentifier: 
+  displayName: "\uAC80"
+  description: "\uACF5\uACA9\uC6A9 \uAC80\uC785\uB2C8\uB2E4."
+  type: 1
+  icon: {fileID: 21300000, guid: 4f2f320a217307a48a107491b1d17ebb, type: 3}
+  dropprefab: {fileID: 4935545992258808371, guid: f7e7f122229097b498525c83f40dcdf6, type: 3}
+  canStack: 0
+  maxStackAmount: 0
+  consumables: []
+  equipPrefab: {fileID: 5560688484180463641, guid: 241a71f53166cb34cbc677195c835567, type: 3}
+  damage: 50
