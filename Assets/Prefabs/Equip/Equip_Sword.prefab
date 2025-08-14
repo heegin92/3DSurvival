@@ -46,12 +46,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29d8e41e4d57f7e44bd5f09946ad8e94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemData: {fileID: 0}
   attackRate: 0.8
   attackDistance: 1
   useStamina: 15
   doesGatherResources: 0
   doesDealDamage: 1
-  damage: 10
+  damage: 20
 --- !u!95 &-8294781357365946190
 Animator:
   serializedVersion: 5

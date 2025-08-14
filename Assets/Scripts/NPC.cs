@@ -187,6 +187,8 @@ public class NPC : MonoBehaviour, IDamageable
     public void TakePhysicalDamage(int damage)
     {
         health -= damage;
+        Debug.Log($"데미지 받음! 남은 체력: {health}");
+
         if (health <= 0)
         {
             Die();
@@ -198,7 +200,7 @@ public class NPC : MonoBehaviour, IDamageable
     {
         for(int i = 0; i < dropOnDeath.Length; i++)
         {
-            Instantiate(dropOnDeath[i].dropprefab, transform.position + Vector3.up, Quaternion.identity);
+            Instantiate(dropOnDeath[i].dropPrefab, transform.position + Vector3.up *2, Quaternion.identity);
         }
 
         Destroy(gameObject);

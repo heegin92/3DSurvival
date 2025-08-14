@@ -3,10 +3,11 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
-    public float attackRange = 2f; // 공격 범위
+    public float attackRange = 5f; // 공격 범위
     public float attackRate = 1f;  // 공격 속도
     private float lastAttackTime;
     private ItemData currentEquippedWeapon; // 현재 장착된 무기 아이템 데이터
+    public LayerMask enemyLayer;
 
     void Update()
     {

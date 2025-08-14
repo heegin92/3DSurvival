@@ -162,7 +162,7 @@ public class UIInventory : MonoBehaviour
 
     void ThrowItem(ItemData data)
     {
-        Instantiate(data.dropprefab, dropPosition.position, Quaternion.Euler(Vector3.one * Random.value * 360));
+        Instantiate(data.dropPrefab, dropPosition.position, Quaternion.Euler(Vector3.one * Random.value * 360));
     }
 
     public void SelectItem(int index)
