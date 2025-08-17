@@ -13,7 +13,8 @@ public enum ItemType
 public enum ConsumableType
 {
     Hunger,
-    Health
+    Health,
+    Water
 }
 
 [Serializable]

@@ -7,6 +7,7 @@ public class UICondition : MonoBehaviour
     public Condition health;
     public Condition stamina;
     public Condition hunger;
+    public Condition water;
 
     // Start is called before the first frame update
     void Start()

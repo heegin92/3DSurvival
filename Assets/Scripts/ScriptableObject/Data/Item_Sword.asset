@@ -16,9 +16,12 @@ MonoBehaviour:
   description: "\uACF5\uACA9\uC6A9 \uAC80\uC785\uB2C8\uB2E4."
   type: 1
   icon: {fileID: 21300000, guid: 4f2f320a217307a48a107491b1d17ebb, type: 3}
-  dropprefab: {fileID: 4935545992258808371, guid: f7e7f122229097b498525c83f40dcdf6, type: 3}
+  dropPrefab: {fileID: 0}
   canStack: 0
   maxStackAmount: 0
   consumables: []
+  isCoroutine: 0
+  coroutineInterval: 0.5
+  coroutineCount: 1
   equipPrefab: {fileID: 5560688484180463641, guid: 241a71f53166cb34cbc677195c835567, type: 3}
-  damage: 50
+  damage: 15

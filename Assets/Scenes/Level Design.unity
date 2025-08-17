@@ -492,6 +492,81 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9da7b8e9276b4d643954325925da78c7, type: 3}
+--- !u!1 &22823256
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 22823257}
+  - component: {fileID: 22823259}
+  - component: {fileID: 22823258}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &22823257
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 22823256}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 39696601}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 31, y: 0}
+  m_SizeDelta: {x: 265, y: 40}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &22823258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 22823256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.11894804, g: 0.60898244, b: 0.764151, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 7482667652216324306, guid: ba1a94d46e38c944bbafecb84cb4c5c9, type: 3}
+  m_Type: 3
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 0
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &22823259
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 22823256}
+  m_CullTransparentMesh: 1
 --- !u!1001 &35521307
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -570,6 +645,101 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 930026083976683566, guid: 8b63f536dcb9512418bb18c53c2565c6, type: 3}
   m_PrefabInstance: {fileID: 2100853023}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &39696600
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 39696601}
+  - component: {fileID: 39696604}
+  - component: {fileID: 39696603}
+  - component: {fileID: 39696602}
+  m_Layer: 5
+  m_Name: Water
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &39696601
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 39696600}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2019998100}
+  - {fileID: 22823257}
+  m_Father: {fileID: 983889378}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 350, y: 42}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &39696602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 39696600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce4c0aa7b84b90346b772bd6973407bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curValue: 0
+  maxValue: 100
+  startValue: 100
+  passiveValue: 5
+  uiBar: {fileID: 22823258}
+--- !u!114 &39696603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 39696600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.41509432, g: 0.41509432, b: 0.41509432, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &39696604
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 39696600}
+  m_CullTransparentMesh: 1
 --- !u!1001 &41838363
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2207,11 +2377,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiCondition: {fileID: 0}
-  noHungerHealthDecay: 2
+  noHungerHealthDecay: 1
+  noWaterHealthDecay: 1
   currentHealth: 100
   maxHealth: 100
   currentHunger: 300
   maxHunger: 300
+  currentWater: 300
+  maxWater: 300
 --- !u!114 &141889872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3092,7 +3265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!224 &171858526 stripped
@@ -3216,7 +3389,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!1001 &177906226
@@ -3557,7 +3730,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!1001 &192629438
@@ -4703,7 +4876,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!1 &239486821 stripped
@@ -5739,7 +5912,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.25882354, g: 0.45882356, b: 0.019607844, a: 1}
+  m_Color: {r: 0.449691, g: 0.6698113, b: 0.18640976, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5807,7 +5980,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 350, y: 65}
+  m_SizeDelta: {x: 350, y: 42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &310507108
 MonoBehaviour:
@@ -6264,7 +6437,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!208 &323060190
@@ -8422,7 +8595,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!1 &463473759 stripped
@@ -9032,7 +9205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!1001 &538553313
@@ -9504,7 +9677,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!1 &548705287 stripped
@@ -11508,7 +11681,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!208 &662787898
@@ -11847,7 +12020,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!1001 &687839841
@@ -12083,7 +12256,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!1001 &712306568
@@ -12416,7 +12589,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!1001 &743618415
@@ -13100,7 +13273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!1 &782266529 stripped
@@ -14788,7 +14961,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!208 &873599673
@@ -15489,7 +15662,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!1001 &913456943
@@ -15601,7 +15774,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!208 &913456950
@@ -16147,7 +16320,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!1001 &933121806
@@ -16706,7 +16879,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!1 &953546224 stripped
@@ -16747,7 +16920,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!1 &955084284 stripped
@@ -16788,7 +16961,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!1001 &956148307
@@ -17353,6 +17526,7 @@ RectTransform:
   - {fileID: 310507107}
   - {fileID: 2007758048}
   - {fileID: 1777549667}
+  - {fileID: 39696601}
   m_Father: {fileID: 358270819}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
@@ -17375,6 +17549,7 @@ MonoBehaviour:
   health: {fileID: 310507108}
   stamina: {fileID: 1777549668}
   hunger: {fileID: 2007758049}
+  water: {fileID: 39696602}
 --- !u!114 &983889380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18385,7 +18560,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!1001 &1015330104
@@ -19332,7 +19507,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!1001 &1062749125
@@ -19842,7 +20017,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!1 &1078069173 stripped
@@ -20083,7 +20258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!1 &1091288802 stripped
@@ -20727,7 +20902,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!208 &1135009487
@@ -21686,7 +21861,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!1 &1213807377 stripped
@@ -21727,7 +21902,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!1 &1216424446 stripped
@@ -21768,7 +21943,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!1 &1217475605 stripped
@@ -22122,7 +22297,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!1001 &1246709525
@@ -22485,7 +22660,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!1001 &1253646188
@@ -22685,7 +22860,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!1 &1266862611 stripped
@@ -23396,7 +23571,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!1001 &1281028539
@@ -23505,7 +23680,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!1001 &1282156570
@@ -23874,7 +24049,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!1001 &1289161776
@@ -24191,7 +24366,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!1001 &1306853970
@@ -24360,7 +24535,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!1001 &1314346877
@@ -24697,7 +24872,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!208 &1323887744
@@ -24956,7 +25131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!1001 &1330031661
@@ -25264,7 +25439,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!208 &1337588516
@@ -25321,7 +25496,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!1001 &1341049683
@@ -25562,7 +25737,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!1 &1347124966 stripped
@@ -25722,7 +25897,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!1001 &1361307058
@@ -25892,7 +26067,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!1 &1388546040 stripped
@@ -25933,7 +26108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!1001 &1390526872
@@ -26167,7 +26342,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!1 &1406717865
@@ -26943,7 +27118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!1001 &1443078606
@@ -27860,7 +28035,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!1001 &1483753489
@@ -27969,7 +28144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!1 &1487272209 stripped
@@ -28010,7 +28185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!1 &1488851869 stripped
@@ -28638,7 +28813,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!1001 &1521852698
@@ -29143,7 +29318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!1001 &1538519339
@@ -29790,7 +29965,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!208 &1556266004
@@ -30098,7 +30273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!1 &1576818183 stripped
@@ -30139,7 +30314,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!1 &1580403909 stripped
@@ -30365,7 +30540,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!1001 &1586592930
@@ -30474,7 +30649,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!1001 &1587328762
@@ -31370,7 +31545,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!1 &1620764558 stripped
@@ -32015,7 +32190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!208 &1643562584
@@ -32324,7 +32499,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!1001 &1663596027
@@ -32436,7 +32611,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!208 &1663596034
@@ -32493,7 +32668,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!1001 &1668913824
@@ -32935,7 +33110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!224 &1693672347 stripped
@@ -33122,7 +33297,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!1 &1705110222 stripped
@@ -33682,7 +33857,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!224 &1728538742 stripped
@@ -33923,7 +34098,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!1001 &1751116133
@@ -34173,7 +34348,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!208 &1764084650
@@ -34569,7 +34744,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!1 &1777549666
@@ -34610,7 +34785,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 350, y: 65}
+  m_SizeDelta: {x: 350, y: 42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1777549668
 MonoBehaviour:
@@ -34905,7 +35080,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.54901963, g: 0.34509805, b: 0.16078432, a: 1}
+  m_Color: {r: 0.7843138, g: 0.5372549, b: 0.3137255, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -35236,7 +35411,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!1001 &1808931067
@@ -35596,7 +35771,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!1001 &1847332506
@@ -35906,7 +36081,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!208 &1849946528
@@ -36031,7 +36206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!1001 &1852535100
@@ -36140,7 +36315,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!1001 &1852555093
@@ -36249,7 +36424,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!1001 &1854674576
@@ -36368,7 +36543,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!1001 &1856746615
@@ -37361,7 +37536,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!1 &1939316108 stripped
@@ -37402,7 +37577,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!208 &1939316114
@@ -37728,7 +37903,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!1001 &1965166584
@@ -37840,7 +38015,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!208 &1965166591
@@ -37965,7 +38140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!1001 &1970190551
@@ -38587,7 +38762,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 350, y: 65}
+  m_SizeDelta: {x: 350, y: 42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2007758049
 MonoBehaviour:
@@ -39036,6 +39211,81 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2515697713448990657, guid: 1876e96a48eea50458d7e14f141123ed, type: 3}
   m_PrefabInstance: {fileID: 2016477614}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2019998099
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2019998100}
+  - component: {fileID: 2019998102}
+  - component: {fileID: 2019998101}
+  m_Layer: 5
+  m_Name: Icon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2019998100
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2019998099}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 39696601}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -140, y: 0}
+  m_SizeDelta: {x: 55, y: 55}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2019998101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2019998099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.11764707, g: 0.60784316, b: 0.76470596, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: e5b12bd9e10b9cd4b8858e46bc017b05, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2019998102
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2019998099}
+  m_CullTransparentMesh: 1
 --- !u!1001 &2021856073
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39131,7 +39381,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!1 &2024241519 stripped
@@ -39172,7 +39422,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!208 &2024241525
@@ -39903,7 +40153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!1 &2055876525 stripped
@@ -39944,7 +40194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!1001 &2055991860
@@ -40053,7 +40303,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!1001 &2064714279
@@ -40160,7 +40410,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!208 &2068002472
@@ -40217,7 +40467,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!1001 &2072103551
@@ -40388,7 +40638,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!1001 &2091508699
@@ -40623,7 +40873,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!208 &2097025321
@@ -40748,7 +40998,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!1001 &2100853023
@@ -40917,7 +41167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!1 &2105807879 stripped
@@ -41207,7 +41457,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!1001 &2116760204
@@ -41444,7 +41694,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!1001 &2120925640
@@ -41677,7 +41927,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!1001 &2132257654
@@ -42042,7 +42292,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!1 &2139596080 stripped
@@ -42083,7 +42333,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!208 &2139596086
@@ -42211,7 +42461,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3364379dd5cdd49a4d6e8aa51b8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToGive: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
+  itemToGive: {fileID: 11400000, guid: 0d4c7ce61c09e084eae21af85400b6a3, type: 2}
   quantityPerHit: 1
   capacy: 5
 --- !u!208 &2140790591
@@ -42490,6 +42740,14 @@ PrefabInstance:
       propertyPath: detectDistance
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5989089755450597066, guid: e1f9db318122ffd4aa2e4c8b37f9cc4f, type: 3}
+      propertyPath: dropOnDeath.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5989089755450597066, guid: e1f9db318122ffd4aa2e4c8b37f9cc4f, type: 3}
+      propertyPath: dropOnDeath.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: f95494a936fffca489529cf4f0121852, type: 2}
     - target: {fileID: 6490982555939173654, guid: e1f9db318122ffd4aa2e4c8b37f9cc4f, type: 3}
       propertyPath: m_Layer
       value: 10

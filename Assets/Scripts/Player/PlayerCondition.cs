@@ -16,8 +16,10 @@ public class PlayerCondition : MonoBehaviour, IDamageable
     Condition health { get { return uiCondition.health; } }
     Condition stamina { get { return uiCondition.stamina; } }
     Condition hunger { get { return uiCondition.hunger; } }
+    Condition water { get { return uiCondition.water; } }
 
     public float noHungerHealthDecay;
+    public float noWaterHealthDecay;
 
     public event Action onTakeDamage;
 
@@ -25,9 +27,12 @@ public class PlayerCondition : MonoBehaviour, IDamageable
     public float maxHealth = 100;
     public float currentHunger;
     public float maxHunger = 300;
+    public float currentWater;
+    public float maxWater = 300;
 
     public event Action<float, float> OnHealthChanged;
     public event Action<float, float> OnHungerChanged;
+    public event Action<float, float> OnWanterChanged;
 
     // Update is called once per frame
 
@@ -35,18 +40,27 @@ public class PlayerCondition : MonoBehaviour, IDamageable
     {
         currentHealth = maxHealth;
         currentHunger = maxHunger;
+        currentWater = maxWater;
+
 
         OnHealthChanged?.Invoke(currentHealth, maxHealth);
         OnHungerChanged?.Invoke(currentHunger, maxHunger);
+        OnWanterChanged?.Invoke(currentWater, maxWater);
     }
     void Update()
     {
-        hunger.Subtract(hunger.passiveValue * Time.deltaTime);
+        hunger.Subtract(hunger.passiveValue * Time.deltaTime / 4);
+        water.Subtract(water.passiveValue * Time.deltaTime / 4);
         stamina.Add(stamina.passiveValue * Time.deltaTime);
 
         if (hunger.curValue <= 0f)
         {
             health.Subtract(noHungerHealthDecay * Time.deltaTime);
+        }
+
+        if (water.curValue <= 0f)
+        {
+            health.Subtract(noWaterHealthDecay * Time.deltaTime);
         }
 
         if (health.curValue <= 0f)
@@ -70,6 +84,11 @@ public class PlayerCondition : MonoBehaviour, IDamageable
 
                     case ConsumableType.Hunger:
                         // hunger 스크립트의 Add 함수 호출
+                        hunger.Add(effect.value);
+                        break;
+
+                    case ConsumableType.Water:
+                        // water 스크립트의 Add 함수 호출
                         hunger.Add(effect.value);
                         break;
                 }
