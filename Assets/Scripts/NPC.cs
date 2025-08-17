@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -42,6 +42,8 @@ public class NPC : MonoBehaviour, IDamageable
     private Animator animator;
     private SkinnedMeshRenderer[] meshRenderers;
 
+    private bool isDying = false; // 👈 사망 상태를 체크하는 새로운 변수
+
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -57,6 +59,9 @@ public class NPC : MonoBehaviour, IDamageable
     // Update is called once per frame
     void Update()
     {
+
+        // 사망 상태일 때는 아무것도 하지 않도록 조건 추가
+        if (isDying) return;
         playerDistance = Vector3.Distance(transform.position, CharacterManager.Instance.Player.transform.position);
 
         animator.SetBool("Moving", aiState != AIState.Idle);
@@ -186,8 +191,10 @@ public class NPC : MonoBehaviour, IDamageable
 
     public void TakePhysicalDamage(int damage)
     {
+        if (isDying) return; // 👈 사망 중에는 데미지를 받지 않음
+
         health -= damage;
-        Debug.Log($"������ ����! ���� ü��: {health}");
+        Debug.Log($"데미지 받음! 남은 체력: {health}");
 
         if (health <= 0)
         {
@@ -198,12 +205,31 @@ public class NPC : MonoBehaviour, IDamageable
     }
     void Die()
     {
-        for(int i = 0; i < dropOnDeath.Length; i++)
+        isDying = true; // 👈 사망 상태로 전환
+
+        // NPC의 이동 및 물리적 충돌 정지
+        if (agent != null)
         {
-            Instantiate(dropOnDeath[i].dropPrefab, transform.position + Vector3.up *2, Quaternion.identity);
+            agent.isStopped = true;
+            agent.enabled = false;
+        }
+        Collider col = GetComponent<Collider>();
+        if (col != null) col.enabled = false;
+
+        // 사망 애니메이션 재생
+        if (animator != null)
+        {
+            animator.SetTrigger("Die");
         }
 
-        Destroy(gameObject);
+        // 아이템 드롭
+        for (int i = 0; i < dropOnDeath.Length; i++)
+        {
+            Instantiate(dropOnDeath[i].dropPrefab, transform.position + Vector3.up * 2, Quaternion.identity);
+        }
+
+        // 2초 후 오브젝트 삭제 (애니메이션 재생 시간을 고려)
+        Destroy(gameObject, 2.0f);
     }
 
     IEnumerator DamageFlash()

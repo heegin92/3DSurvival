@@ -14,7 +14,7 @@ public class Equip : MonoBehaviour
     public LayerMask hitLayers;
 
     // OnAttackInput() 함수는 Equipment.cs 스크립트에서 호출됩니다.
-    public void OnAttackInput()
+    public virtual void OnAttackInput()
     {
         // 플레이어의 위치를 중심으로 지정된 범위와 레이어에 있는 콜라이더를 감지
         Collider[] hitObjects = Physics.OverlapSphere(
