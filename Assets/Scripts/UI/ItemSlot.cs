@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -8,29 +8,29 @@ public class ItemSlot : MonoBehaviour
 {
     public ItemData item;
 
-    public Button button; // ¾ÆÀÌÅÛ ½½·Ô¿¡ ¿¬°áµÈ ¹öÆ°
-    public Image icon; // ¾ÆÀÌÅÛ ¾ÆÀÌÄÜÀ» Ç¥½ÃÇÏ±â À§ÇÑ ÀÌ¹ÌÁö
-    public TextMeshProUGUI quantityText; // ¾ÆÀÌÅÛ °³¼ö¸¦ Ç¥½ÃÇÏ±â À§ÇÑ ÅØ½ºÆ®
-    private Outline outline; // ¾ÆÀÌÅÛ ½½·ÔÀÇ ¿Ü°û¼±À» Ç¥½ÃÇÏ±â À§ÇÑ ¾Æ¿ô¶óÀÎ ÄÄÆ÷³ÍÆ®
+    public Button button; // ì•„ì´í…œ ìŠ¬ë¡¯ì— ì—°ê²°ëœ ë²„íŠ¼
+    public Image icon; // ì•„ì´í…œ ì•„ì´ì½˜ì„ í‘œì‹œí•˜ê¸° ìœ„í•œ ì´ë¯¸ì§€
+    public TextMeshProUGUI quantityText; // ì•„ì´í…œ ê°œìˆ˜ë¥¼ í‘œì‹œí•˜ê¸° ìœ„í•œ í…ìŠ¤íŠ¸
+    private Outline outline; // ì•„ì´í…œ ìŠ¬ë¡¯ì˜ ì™¸ê³½ì„ ì„ í‘œì‹œí•˜ê¸° ìœ„í•œ ì•„ì›ƒë¼ì¸ ì»´í¬ë„ŒíŠ¸
 
-    public UIInventory inventory; // ÀÎº¥Åä¸® UI¸¦ ÂüÁ¶ÇÏ±â À§ÇÑ º¯¼ö
+    public UIInventory inventory; // ì¸ë²¤í† ë¦¬ UIë¥¼ ì°¸ì¡°í•˜ê¸° ìœ„í•œ ë³€ìˆ˜
 
-    public int index; // ¾ÆÀÌÅÛ ½½·ÔÀÇ ÀÎµ¦½º
-    public bool equipped; // ¾ÆÀÌÅÛÀÌ ÀåÂøµÇ¾ú´ÂÁö ¿©ºÎ
-    public int quantity; // ¾ÆÀÌÅÛÀÇ °³¼ö
+    public int index; // ì•„ì´í…œ ìŠ¬ë¡¯ì˜ ì¸ë±ìŠ¤
+    public bool equipped; // ì•„ì´í…œì´ ì¥ì°©ë˜ì—ˆëŠ”ì§€ ì—¬ë¶€
+    public int quantity; // ì•„ì´í…œì˜ ê°œìˆ˜
 
 
     // Start is called before the first frame update
     
     private void Awake()
     {
-        outline = GetComponent<Outline>(); // ¾Æ¿ô¶óÀÎ ÄÄÆ÷³ÍÆ®¸¦ °¡Á®¿É´Ï´Ù.
+        outline = GetComponent<Outline>(); // ì•„ì›ƒë¼ì¸ ì»´í¬ë„ŒíŠ¸ë¥¼ ê°€ì ¸ì˜µë‹ˆë‹¤.
     }
 
 
     private void OnEnable()
     {
-        outline.enabled = equipped; // ¾ÆÀÌÅÛÀÌ ÀåÂøµÇ¾úÀ» ¶§ ¾Æ¿ô¶óÀÎÀ» È°¼ºÈ­ÇÕ´Ï´Ù.
+        outline.enabled = equipped; // ì•„ì´í…œì´ ì¥ì°©ë˜ì—ˆì„ ë•Œ ì•„ì›ƒë¼ì¸ì„ í™œì„±í™”í•©ë‹ˆë‹¤.
     }
     void Start()
     {
@@ -45,21 +45,29 @@ public class ItemSlot : MonoBehaviour
 
     public void Set()
     {
-        icon.gameObject.SetActive(true); // ¾ÆÀÌÄÜÀ» È°¼ºÈ­ÇÕ´Ï´Ù.
-        icon.sprite = item.icon; // ¾ÆÀÌÅÛÀÇ ¾ÆÀÌÄÜÀ» ¼³Á¤ÇÕ´Ï´Ù.
-        quantityText.text = quantity > 1 ? quantity.ToString() : string.Empty; // ¾ÆÀÌÅÛ °³¼ö°¡ 1º¸´Ù Å©¸é °³¼ö¸¦ Ç¥½ÃÇÏ°í, ±×·¸Áö ¾ÊÀ¸¸é ºó ¹®ÀÚ¿­À» Ç¥½ÃÇÕ´Ï´Ù.
-   
+        icon.enabled = true;
+        quantityText.enabled = true;
+
+        icon.sprite = item.icon;
+        quantityText.text = quantity > 1 ? quantity.ToString() : string.Empty;
+
         if (outline != null)
         {
-            outline.enabled = equipped; // ¾ÆÀÌÅÛÀÌ ÀåÂøµÇ¾úÀ» ¶§ ¾Æ¿ô¶óÀÎÀ» È°¼ºÈ­ÇÕ´Ï´Ù.
+            outline.enabled = equipped;
         }
     }
 
     public void Clear()
     {
-        item = null; // ¾ÆÀÌÅÛÀ» ºñ¿ó´Ï´Ù.
-        icon.gameObject.SetActive(false); // ¾ÆÀÌÄÜÀ» ºñÈ°¼ºÈ­ÇÕ´Ï´Ù.
-        quantityText.text = string.Empty; // ¾ÆÀÌÅÛ °³¼ö¸¦ ºñ¿ó´Ï´Ù.
+        item = null;
+        quantity = 0;
+        icon.enabled = false;
+        quantityText.enabled = false;
+
+        if (outline != null)
+        {
+            outline.enabled = false;
+        }
     }
 
     public void OnClickButton()

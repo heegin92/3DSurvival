@@ -33,20 +33,25 @@ public class Inventory : MonoBehaviour
 
     public void RemoveItem(ItemData itemData, int amount)
     {
-        // ⭐ 'items' 리스트에서 아이템을 제거하는 로직을 작성합니다.
-        // 만약 이 함수가 비어있다면 재료는 제거되지 않습니다.
-        for (int i = 0; i < items.Count; i++)
+        // ⭐ 뒤에서부터 순회하며 아이템을 찾습니다.
+        for (int i = items.Count - 1; i >= 0; i--)
         {
             if (items[i].data.ID == itemData.ID)
             {
-                items[i].count -= amount; // 수량 감소
-
-                if (items[i].count <= 0)
+                // ⭐ 인벤토리 아이템 수량이 요구량보다 많거나 같을 때만 제거합니다.
+                if (items[i].count >= amount)
                 {
-                    items.RemoveAt(i); // 수량이 0 이하면 리스트에서 제거
+                    items[i].count -= amount; // 수량 감소
+
+                    if (items[i].count <= 0)
+                    {
+                        items.RemoveAt(i); // 수량이 0 이하면 리스트에서 제거
+                    }
+
+                    // ⭐ 아이템 제거 후 UI 업데이트 이벤트를 호출합니다.
+                    OnInventoryChanged?.Invoke();
+                    return; // 함수 종료
                 }
-                OnInventoryChanged?.Invoke(); // UI 업데이트 이벤트 호출
-                return;
             }
         }
     }

@@ -93,23 +93,27 @@ public class UIInventory : MonoBehaviour
         return inventoryWindow.activeInHierarchy; // 인벤토리 창이 열려있는지 확인
     }
 
-   
 
-    void UpdateUI()
+
+    public void UpdateUI()
     {
-        // ⭐ 수정: 실제 인벤토리(Inventory.cs)의 아이템 리스트를 기반으로 UI를 업데이트합니다.
+        // 1. 먼저 모든 기존 UI 슬롯을 초기화하여 깨끗한 상태로 만듭니다.
         for (int i = 0; i < slots.Length; i++)
         {
-            if (i < playerInventory.items.Count) // 인벤토리 리스트에 아이템이 있는 경우
+            slots[i].Clear();
+        }
+
+        // 2. 인벤토리의 실제 아이템 데이터로 UI 슬롯을 채웁니다.
+        for (int i = 0; i < playerInventory.items.Count; i++)
+        {
+            // UI 슬롯 배열의 범위를 벗어나지 않도록 확인합니다.
+            if (i < slots.Length)
             {
-                // 실제 Inventory의 Item 데이터를 UI 슬롯에 할당합니다.
-                slots[i].item = playerInventory.items[i].data;
-                slots[i].quantity = playerInventory.items[i].count;
+                Item currentItem = playerInventory.items[i];
+
+                slots[i].item = currentItem.data;
+                slots[i].quantity = currentItem.count;
                 slots[i].Set();
-            }
-            else
-            {
-                slots[i].Clear(); // 인벤토리 리스트에 없는 슬롯은 비웁니다.
             }
         }
     }
