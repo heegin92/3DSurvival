@@ -1,63 +1,68 @@
-// PlayerAttack.cs
+ï»¿// PlayerAttack.cs
 using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
-    public float attackDamage = 10f; // °ø°İ µ¥¹ÌÁö
-    public float attackRange = 5f; // °ø°İ ¹üÀ§
-    public float attackRate = 1f;  // °ø°İ ¼Óµµ
+    public float attackDamage = 10f; // ê³µê²© ë°ë¯¸ì§€
+    public float attackRange = 5f; // ê³µê²© ë²”ìœ„
+    public float attackRate = 1f;  // ê³µê²© ì†ë„
     private float lastAttackTime;
-    private ItemData currentEquippedWeapon; // ÇöÀç ÀåÂøµÈ ¹«±â ¾ÆÀÌÅÛ µ¥ÀÌÅÍ
+    private ItemData currentEquippedWeapon; // í˜„ì¬ ì¥ì°©ëœ ë¬´ê¸° ì•„ì´í…œ ë°ì´í„°
     public LayerMask enemy;
     public Animator animator;
 
 
     void Update()
     {
-        // ¸¶¿ì½º ¿ŞÂÊ ¹öÆ° Å¬¸¯ ½Ã °ø°İ
+        // ë§ˆìš°ìŠ¤ ì™¼ìª½ ë²„íŠ¼ í´ë¦­ ì‹œ ê³µê²©
         if (Input.GetMouseButtonDown(0) && Time.time - lastAttackTime > attackRate)
         {
             Attack();
         }
     }
 
-
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, attackRange);
+    }
     void Attack()
     {
         lastAttackTime = Time.time;
 
-        // °ø°İ ¹üÀ§ ³»ÀÇ ÀûÀ» °¨Áö
-        // Physics.OverlapSphere´Â ÁöÁ¤µÈ ·¹ÀÌ¾î(enemyLayer)ÀÇ Äİ¶óÀÌ´õ¸¸ °¨Áö
+        // ê³µê²© ë²”ìœ„ ë‚´ì˜ ì ì„ ê°ì§€
         Collider[] hitEnemies = Physics.OverlapSphere(transform.position, attackRange, enemy);
-        Debug.Log($"°¨ÁöµÈ Äİ¶óÀÌ´õ ¼ö: {hitEnemies.Length}");
+        Debug.Log($"ê°ì§€ëœ ì½œë¼ì´ë” ìˆ˜: {hitEnemies.Length}");
 
-        foreach (Collider enemy in hitEnemies)
+        foreach (Collider hitCollider in hitEnemies)
         {
-            // °¨ÁöµÈ Äİ¶óÀÌ´õ°¡ ÇÃ·¹ÀÌ¾î ÀÚ½ÅÀÌ ¾Æ´ÑÁö È®ÀÎ
-            if (enemy.gameObject == this.gameObject)
+            // â­ í”Œë ˆì´ì–´ ìì‹ ì´ë¼ë©´ ë°ë¯¸ì§€ ë¡œì§ì„ ê±´ë„ˆëœ€
+            if (hitCollider.gameObject == this.gameObject)
             {
-                continue; // ÇÃ·¹ÀÌ¾î ÀÚ½ÅÀÌ¶ó¸é µ¥¹ÌÁö ·ÎÁ÷À» °Ç³Ê¶Ü
+                continue;
             }
 
-            Debug.Log($"°¨ÁöµÈ ¿ÀºêÁ§Æ®: {enemy.name}");
+            // â­ ê°ì§€ëœ ì½œë¼ì´ë”ì—ì„œ IDamageable ì»´í¬ë„ŒíŠ¸ë¥¼ í•œ ë²ˆë§Œ ì°¾ìŒ
+            IDamageable damageable = hitCollider.GetComponent<IDamageable>();
 
-            // IDamageable ÀÎÅÍÆäÀÌ½º¸¦ °¡Áø ÀûÀ» Ã£À½
-            IDamageable damageableEnemy = enemy.GetComponent<IDamageable>();
-            if (damageableEnemy != null)
+            // â­ ì»´í¬ë„ŒíŠ¸ê°€ ì¡´ì¬í•˜ë©´ ë°ë¯¸ì§€ ë¡œì§ ì‹¤í–‰
+            if (damageable != null)
             {
+                // ìµœì¢… ë°ë¯¸ì§€ ê³„ì‚° (ë¬´ê¸° ì°©ìš© ì—¬ë¶€ í™•ì¸)
                 float finalDamage = (currentEquippedWeapon != null) ? currentEquippedWeapon.damage : attackDamage;
 
-                // ÀÌ ·Î±×¸¦ Ãß°¡ÇÏ¿© ÃÖÁ¾ µ¥¹ÌÁö °ªÀ» È®ÀÎ
-                Debug.Log($"´ë»ó: {enemy.name}, ÃÖÁ¾ µ¥¹ÌÁö: {finalDamage}");
+                Debug.Log($"ëŒ€ìƒ: {hitCollider.name}, ìµœì¢… ë°ë¯¸ì§€: {finalDamage}");
 
-                damageableEnemy.TakePhysicalDamage((int)finalDamage);
+                // ë°ë¯¸ì§€ ì ìš©
+                damageable.TakePhysicalDamage((int)finalDamage);
             }
         }
     }
-
     public void SetWeapon(ItemData weaponData)
     {
         currentEquippedWeapon = weaponData;
     }
-
 }
+
+   
+

@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{F1C35FA6-607C-F7A4-E572-A7039DD56339}</ProjectGuid>
+    <ProjectGuid>{F3771EDC-EF17-B3C0-2F02-5782CDBFF624}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -62,7 +62,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Player\PlayerCondition.cs" />
     <Compile Include="Assets\Externals\Blink\Art\Animals\Stylized\Demo_Animals\DemoData\AnimationDemo.cs" />
-    <Compile Include="Assets\Scripts\NPC.cs" />
+    <Compile Include="Assets\Scripts\NPC\NPCSpawner.cs" />
     <Compile Include="Assets\Scripts\UI\UIInventory.cs" />
     <Compile Include="Assets\Scripts\UI\UICondition.cs" />
     <Compile Include="Assets\Scripts\Player\Interaction.cs" />
@@ -83,6 +83,8 @@
     <Compile Include="Assets\Scripts\Player\Equipment.cs" />
     <Compile Include="Assets\Scripts\Item\Equip.cs" />
     <Compile Include="Assets\Scripts\CampFire.cs" />
+    <Compile Include="Assets\Scripts\NPC\NPC.cs" />
+    <Compile Include="Assets\Scripts\JumpBar.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
