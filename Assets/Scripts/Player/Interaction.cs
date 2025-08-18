@@ -73,7 +73,7 @@ public class Interaction : MonoBehaviour
     {
         if (context.phase == InputActionPhase.Started && curInteractable != null)
         {
-            curInteractable.OnInteract();
+            curInteractable.OnInteract(); // This should be calling your ItemObject's logic.
             promptText.gameObject.SetActive(false);
             curInteractGameObject = null;
             curInteractable = null;

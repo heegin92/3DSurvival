@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -6,25 +6,26 @@ using UnityEngine;
 public class UIInventory : MonoBehaviour
 {
     public ItemSlot[] slots;
-    // ¾ÆÀÌÅÛ ½½·Ô ¹è¿­
+    // ì•„ì´í…œ ìŠ¬ë¡¯ ë°°ì—´
 
 
     public GameObject inventoryWindow;
     public Transform slotPanel;
-    public Transform dropPosition; // ¾ÆÀÌÅÛÀ» µå·ÓÇÒ À§Ä¡
+    public Transform dropPosition; // ì•„ì´í…œì„ ë“œë¡­í•  ìœ„ì¹˜
 
     [Header("Select Item")]
     public TextMeshProUGUI selectedItemName;
-    public TextMeshProUGUI selectedItemDescription; // ¼±ÅÃµÈ ¾ÆÀÌÅÛÀÇ ÀÌ¸§°ú ¼³¸íÀ» Ç¥½ÃÇÒ UI ¿ä¼Ò
-    public TextMeshProUGUI selectedStatName;// ¼±ÅÃµÈ ¾ÆÀÌÅÛÀÇ ´É·ÂÄ¡ ÀÌ¸§À» Ç¥½ÃÇÒ UI ¿ä¼Ò
-    public TextMeshProUGUI selectedStatValue; // ¼±ÅÃµÈ ¾ÆÀÌÅÛÀÇ ´É·ÂÄ¡ °ªÀ» Ç¥½ÃÇÒ UI ¿ä¼Ò
+    public TextMeshProUGUI selectedItemDescription; // ì„ íƒëœ ì•„ì´í…œì˜ ì´ë¦„ê³¼ ì„¤ëª…ì„ í‘œì‹œí•  UI ìš”ì†Œ
+    public TextMeshProUGUI selectedStatName;// ì„ íƒëœ ì•„ì´í…œì˜ ëŠ¥ë ¥ì¹˜ ì´ë¦„ì„ í‘œì‹œí•  UI ìš”ì†Œ
+    public TextMeshProUGUI selectedStatValue; // ì„ íƒëœ ì•„ì´í…œì˜ ëŠ¥ë ¥ì¹˜ ê°’ì„ í‘œì‹œí•  UI ìš”ì†Œ
     public GameObject useButton;
     public GameObject equipButton;
     public GameObject unequipButton;
     public GameObject dropButton;
 
-    private PlayerController controller;// ÇÃ·¹ÀÌ¾î ÄÁÆ®·Ñ·¯ ÂüÁ¶
-    private PlayerCondition condition; // ÇÃ·¹ÀÌ¾î »óÅÂ ÂüÁ¶
+    private PlayerController controller;// í”Œë ˆì´ì–´ ì»¨íŠ¸ë¡¤ëŸ¬ ì°¸ì¡°
+    private PlayerCondition condition; // í”Œë ˆì´ì–´ ìƒíƒœ ì°¸ì¡°
+    private Inventory playerInventory;
 
     ItemData selectedItem;
     int selectedItemIndex = 0;
@@ -34,24 +35,26 @@ public class UIInventory : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        controller = CharacterManager.Instance.Player.controller; // CharacterManager¸¦ ÅëÇØ ÇÃ·¹ÀÌ¾î ÄÁÆ®·Ñ·¯¸¦ °¡Á®¿È
-        condition = CharacterManager.Instance.Player.condition; // CharacterManager¸¦ ÅëÇØ ÇÃ·¹ÀÌ¾î »óÅÂ¸¦ °¡Á®¿È
-        dropPosition = CharacterManager.Instance.Player.dropPosition; // ÇÃ·¹ÀÌ¾îÀÇ µå·Ó À§Ä¡¸¦ °¡Á®¿È
+        controller = CharacterManager.Instance.Player.controller; // CharacterManagerë¥¼ í†µí•´ í”Œë ˆì´ì–´ ì»¨íŠ¸ë¡¤ëŸ¬ë¥¼ ê°€ì ¸ì˜´
+        condition = CharacterManager.Instance.Player.condition; // CharacterManagerë¥¼ í†µí•´ í”Œë ˆì´ì–´ ìƒíƒœë¥¼ ê°€ì ¸ì˜´
+        dropPosition = CharacterManager.Instance.Player.dropPosition; // í”Œë ˆì´ì–´ì˜ ë“œë¡­ ìœ„ì¹˜ë¥¼ ê°€ì ¸ì˜´
 
-        controller.inventory = Toggle; // ÇÃ·¹ÀÌ¾î ÄÁÆ®·Ñ·¯ÀÇ inventory ¾×¼Ç¿¡ Toggle ¸Ş¼­µå¸¦ ÇÒ´ç
-        CharacterManager.Instance.Player.addItem += AddItem; // ÇÃ·¹ÀÌ¾îÀÇ ¾ÆÀÌÅÛ Ãß°¡ ÀÌº¥Æ®¿¡ AddItem ¸Ş¼­µå¸¦ µî·Ï
+        controller.inventory = Toggle; // í”Œë ˆì´ì–´ ì»¨íŠ¸ë¡¤ëŸ¬ì˜ inventory ì•¡ì…˜ì— Toggle ë©”ì„œë“œë¥¼ í• ë‹¹
 
-        inventoryWindow.SetActive(false); // ÀÎº¥Åä¸® Ã¢À» ºñÈ°¼ºÈ­
-        slots = new ItemSlot[slotPanel.childCount]; // ½½·Ô ¹è¿­ ÃÊ±âÈ­
+        playerInventory = CharacterManager.Instance.Player.GetComponent<Inventory>(); // â­ ì¶”ê°€: Inventory ì»´í¬ë„ŒíŠ¸ë¥¼ ê°€ì ¸ì˜´
+        playerInventory.OnInventoryChanged += UpdateUI; // â­ ì¶”ê°€: ì´ë²¤íŠ¸ êµ¬ë…
+
+        inventoryWindow.SetActive(false); // ì¸ë²¤í† ë¦¬ ì°½ì„ ë¹„í™œì„±í™”
+        slots = new ItemSlot[slotPanel.childCount]; // ìŠ¬ë¡¯ ë°°ì—´ ì´ˆê¸°í™”
 
         for(int i = 0; i < slots.Length; i++)
         {
-            slots[i] = slotPanel.GetChild(i).GetComponent<ItemSlot>(); // °¢ ½½·Ô¿¡ ItemSlot ÄÄÆ÷³ÍÆ®¸¦ ÇÒ´ç\
-            slots[i].index = i; // °¢ ½½·ÔÀÇ ÀÎµ¦½º¸¦ ¼³Á¤
-            slots[i].inventory = this; // °¢ ½½·Ô¿¡ ÇöÀç ÀÎº¥Åä¸® UI¸¦ ÇÒ´ç
+            slots[i] = slotPanel.GetChild(i).GetComponent<ItemSlot>(); // ê° ìŠ¬ë¡¯ì— ItemSlot ì»´í¬ë„ŒíŠ¸ë¥¼ í• ë‹¹\
+            slots[i].index = i; // ê° ìŠ¬ë¡¯ì˜ ì¸ë±ìŠ¤ë¥¼ ì„¤ì •
+            slots[i].inventory = this; // ê° ìŠ¬ë¡¯ì— í˜„ì¬ ì¸ë²¤í† ë¦¬ UIë¥¼ í• ë‹¹
         }
 
-        ClearSelectedItemWindow(); // ¼±ÅÃµÈ ¾ÆÀÌÅÛ Ã¢ ÃÊ±âÈ­
+        ClearSelectedItemWindow(); // ì„ íƒëœ ì•„ì´í…œ ì°½ ì´ˆê¸°í™”
     }
 
     // Update is called once per frame
@@ -62,102 +65,53 @@ public class UIInventory : MonoBehaviour
 
     void ClearSelectedItemWindow()
     {
-        selectedItemName.text = string.Empty; // ¼±ÅÃµÈ ¾ÆÀÌÅÛ ÀÌ¸§ ÃÊ±âÈ­
-        selectedItemDescription.text = string.Empty; // ¼±ÅÃµÈ ¾ÆÀÌÅÛ ¼³¸í ÃÊ±âÈ­
-        selectedStatName.text = string.Empty; // ¼±ÅÃµÈ ¾ÆÀÌÅÛ ´É·ÂÄ¡ ÀÌ¸§ ÃÊ±âÈ­
-        selectedStatValue.text = string.Empty; // ¼±ÅÃµÈ ¾ÆÀÌÅÛ ´É·ÂÄ¡ °ª ÃÊ±âÈ­
+        selectedItemName.text = string.Empty; // ì„ íƒëœ ì•„ì´í…œ ì´ë¦„ ì´ˆê¸°í™”
+        selectedItemDescription.text = string.Empty; // ì„ íƒëœ ì•„ì´í…œ ì„¤ëª… ì´ˆê¸°í™”
+        selectedStatName.text = string.Empty; // ì„ íƒëœ ì•„ì´í…œ ëŠ¥ë ¥ì¹˜ ì´ë¦„ ì´ˆê¸°í™”
+        selectedStatValue.text = string.Empty; // ì„ íƒëœ ì•„ì´í…œ ëŠ¥ë ¥ì¹˜ ê°’ ì´ˆê¸°í™”
 
-        useButton.SetActive(false); // »ç¿ë ¹öÆ° ºñÈ°¼ºÈ­
-        equipButton.SetActive(false); // ÀåÂø ¹öÆ° ºñÈ°¼ºÈ­
-        unequipButton.SetActive(false); // ÀåÂø ÇØÁ¦ ¹öÆ° ºñÈ°¼ºÈ­
-        dropButton.SetActive(false); // µå·Ó ¹öÆ° ºñÈ°¼ºÈ­
+        useButton.SetActive(false); // ì‚¬ìš© ë²„íŠ¼ ë¹„í™œì„±í™”
+        equipButton.SetActive(false); // ì¥ì°© ë²„íŠ¼ ë¹„í™œì„±í™”
+        unequipButton.SetActive(false); // ì¥ì°© í•´ì œ ë²„íŠ¼ ë¹„í™œì„±í™”
+        dropButton.SetActive(false); // ë“œë¡­ ë²„íŠ¼ ë¹„í™œì„±í™”
     }
 
     public void Toggle()
     {
         if (IsOpen())
         {
-            inventoryWindow.SetActive(false); // ÀÎº¥Åä¸® Ã¢ ´İ±â
+            inventoryWindow.SetActive(false); // ì¸ë²¤í† ë¦¬ ì°½ ë‹«ê¸°
         }
         else
         {
-            inventoryWindow.SetActive(true); // ÀÎº¥Åä¸® Ã¢ ¿­±â
+            inventoryWindow.SetActive(true); // ì¸ë²¤í† ë¦¬ ì°½ ì—´ê¸°
         }
     }
 
     public bool IsOpen()
     {
-        return inventoryWindow.activeInHierarchy; // ÀÎº¥Åä¸® Ã¢ÀÌ ¿­·ÁÀÖ´ÂÁö È®ÀÎ
+        return inventoryWindow.activeInHierarchy; // ì¸ë²¤í† ë¦¬ ì°½ì´ ì—´ë ¤ìˆëŠ”ì§€ í™•ì¸
     }
 
-    void AddItem()
-    {
-        ItemData data = CharacterManager.Instance.Player.itemData; // ÇÃ·¹ÀÌ¾îÀÇ ¾ÆÀÌÅÛ µ¥ÀÌÅÍ¸¦ °¡Á®¿È
-
-        if (data.canStack) // ¾ÆÀÌÅÛÀÌ ½ºÅÃ °¡´ÉÇÑÁö È®ÀÎ
-        {
-            ItemSlot slot = GetItemStack(data); // ÇØ´ç ¾ÆÀÌÅÛÀ» °¡Áø ½½·ÔÀ» Ã£À½
-            if (slot != null) // ½½·ÔÀÌ Á¸ÀçÇÏ¸é
-            {
-                slot.quantity++; // ¾ÆÀÌÅÛ °³¼ö Áõ°¡
-                UpdateUI(); // UI ¾÷µ¥ÀÌÆ®
-                CharacterManager.Instance.Player.itemData = null; // ÇÃ·¹ÀÌ¾îÀÇ ¾ÆÀÌÅÛ µ¥ÀÌÅÍ¸¦ ÃÊ±âÈ­
-                return; // ¸Ş¼­µå Á¾·á
-            }
-        }
-
-        ItemSlot emptySlot = GetEmptySlot(); // ºó ½½·ÔÀ» °¡Á®¿È
-
-        if (emptySlot != null) // ºó ½½·ÔÀÌ Á¸ÀçÇÏ¸é
-        {
-            emptySlot.item = data; // ¾ÆÀÌÅÛ µ¥ÀÌÅÍ¸¦ ½½·Ô¿¡ ÇÒ´ç
-            emptySlot.quantity = 1; // ¾ÆÀÌÅÛ °³¼ö¸¦ 1·Î ¼³Á¤
-            UpdateUI(); // UI ¾÷µ¥ÀÌÆ®
-            CharacterManager.Instance.Player.itemData = null;
-            return;
-        }
-
-        ThrowItem(data); // ºó ½½·ÔÀÌ ¾øÀ¸¸é ¾ÆÀÌÅÛÀ» ¹Ù´Ú¿¡ ´øÁü
-        CharacterManager.Instance.Player.itemData = null; // ÇÃ·¹ÀÌ¾îÀÇ ¾ÆÀÌÅÛ µ¥ÀÌÅÍ¸¦ ÃÊ±âÈ­
-    }
+   
 
     void UpdateUI()
     {
-        for(int i = 0; i < slots.Length; i++)
+        // â­ ìˆ˜ì •: ì‹¤ì œ ì¸ë²¤í† ë¦¬(Inventory.cs)ì˜ ì•„ì´í…œ ë¦¬ìŠ¤íŠ¸ë¥¼ ê¸°ë°˜ìœ¼ë¡œ UIë¥¼ ì—…ë°ì´íŠ¸í•©ë‹ˆë‹¤.
+        for (int i = 0; i < slots.Length; i++)
         {
-            if (slots[i].item != null)
+            if (i < playerInventory.items.Count) // ì¸ë²¤í† ë¦¬ ë¦¬ìŠ¤íŠ¸ì— ì•„ì´í…œì´ ìˆëŠ” ê²½ìš°
             {
-                slots[i].Set(); // ½½·Ô¿¡ ¾ÆÀÌÅÛ ¼³Á¤
+                // ì‹¤ì œ Inventoryì˜ Item ë°ì´í„°ë¥¼ UI ìŠ¬ë¡¯ì— í• ë‹¹í•©ë‹ˆë‹¤.
+                slots[i].item = playerInventory.items[i].data;
+                slots[i].quantity = playerInventory.items[i].count;
+                slots[i].Set();
             }
             else
             {
-                slots[i].Clear(); // ½½·Ô ºñ¿ì±â
+                slots[i].Clear(); // ì¸ë²¤í† ë¦¬ ë¦¬ìŠ¤íŠ¸ì— ì—†ëŠ” ìŠ¬ë¡¯ì€ ë¹„ì›ë‹ˆë‹¤.
             }
         }
-    }
-
-    ItemSlot GetItemStack(ItemData data)
-    {
-        for (int i = 0; i < slots.Length; i++)
-        {
-            if (slots[i].item==data && slots[i].quantity < data.maxStackAmount) // ÇØ´ç ¾ÆÀÌÅÛ°ú ÀÏÄ¡ÇÏ°í ÃÖ´ë ½ºÅÃ ¼öº¸´Ù ÀûÀº °æ¿ì
-            {
-                return slots[i]; // ÇØ´ç ¾ÆÀÌÅÛÀ» °¡Áø ½½·Ô ¹İÈ¯
-            }
-        }
-        return null; // ÀÏÄ¡ÇÏ´Â ½½·ÔÀÌ ¾øÀ¸¸é null ¹İÈ¯
-    }
-
-    ItemSlot GetEmptySlot()
-    {
-        for (int i = 0; i < slots.Length; i++)
-        {
-            if (slots[i].item == null) // ¾ÆÀÌÅÛÀÌ ¾ø´Â ºó ½½·ÔÀ» Ã£À½
-            {
-                return slots[i]; // ºó ½½·Ô ¹İÈ¯
-            }
-        }
-        return null; // ºó ½½·ÔÀÌ ¾øÀ¸¸é null ¹İÈ¯
     }
 
     void ThrowItem(ItemData data)
@@ -194,20 +148,20 @@ public class UIInventory : MonoBehaviour
     {
         if (selectedItem.type == ItemType.Consumable)
         {
-            if (selectedItem.isCoroutine) // ÄÚ·çÆ¾ ¾ÆÀÌÅÛÀÎÁö È®ÀÎ
+            if (selectedItem.isCoroutine) // ì½”ë£¨í‹´ ì•„ì´í…œì¸ì§€ í™•ì¸
             {
-                // ÄÚ·çÆ¾ ½ÃÀÛ Àü ·Î±×
-                Debug.Log($"ÄÚ·çÆ¾ È¸º¹ ¾ÆÀÌÅÛ »ç¿ë! {selectedItem.displayName} È¿°ú ½ÃÀÛ.");
+                // ì½”ë£¨í‹´ ì‹œì‘ ì „ ë¡œê·¸
+                Debug.Log($"ì½”ë£¨í‹´ íšŒë³µ ì•„ì´í…œ ì‚¬ìš©! {selectedItem.displayName} íš¨ê³¼ ì‹œì‘.");
 
-                // ApplyConsumableEffectsOverTime ÄÚ·çÆ¾À» ½ÃÀÛÇÏ°í, 
-                // ¾ÆÀÌÅÛÀÇ ¸ğµç È¿°ú ¹è¿­À» Àü´Ş
+                // ApplyConsumableEffectsOverTime ì½”ë£¨í‹´ì„ ì‹œì‘í•˜ê³ , 
+                // ì•„ì´í…œì˜ ëª¨ë“  íš¨ê³¼ ë°°ì—´ì„ ì „ë‹¬
                 StartCoroutine(condition.ApplyConsumableEffectsOverTime(
                     selectedItem.consumables,
                     selectedItem.coroutineCount,
                     selectedItem.coroutineInterval)
                 );
             }
-            else // ÀÏ¹İ ¾ÆÀÌÅÛÀÌ¶ó¸é, ±âÁ¸ ·ÎÁ÷ ½ÇÇà
+            else // ì¼ë°˜ ì•„ì´í…œì´ë¼ë©´, ê¸°ì¡´ ë¡œì§ ì‹¤í–‰
             {
                 for (int i = 0; i < selectedItem.consumables.Length; ++i)
                 {

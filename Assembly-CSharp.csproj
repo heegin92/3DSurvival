@@ -69,10 +69,12 @@
     <Compile Include="Assets\Scripts\Item\EquipTool.cs" />
     <Compile Include="Assets\Scripts\Player\CharacterManager.cs" />
     <Compile Include="Assets\Scripts\DayNightCycle.cs" />
+    <Compile Include="Assets\Scripts\Craft\CraftingRecipe.cs" />
     <Compile Include="Assets\Scripts\ScriptableObject\ItemData.cs" />
     <Compile Include="Assets\Scripts\Player\Player.cs" />
     <Compile Include="Assets\Scripts\Item\ItemObject.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\Player\Inventory.cs" />
     <Compile Include="Assets\Scripts\UI\Condition.cs" />
     <Compile Include="Assets\Scripts\UI\ItemSlot.cs" />
     <Compile Include="Assets\Scripts\MusicZone.cs" />
@@ -80,6 +82,7 @@
     <Compile Include="Assets\Scripts\Player\FootSteps.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerAttack.cs" />
     <Compile Include="Assets\Scripts\UI\DamageIndicator.cs" />
+    <Compile Include="Assets\Scripts\Craft\CraftingSystem.cs" />
     <Compile Include="Assets\Scripts\Player\Equipment.cs" />
     <Compile Include="Assets\Scripts\Item\Equip.cs" />
     <Compile Include="Assets\Scripts\CampFire.cs" />

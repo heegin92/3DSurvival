@@ -69,11 +69,11 @@ public class PlayerCondition : MonoBehaviour, IDamageable
         }
     }
 
-    public IEnumerator ApplyConsumableEffectsOverTime(ItemDataConSumable[] effects, int count, float interval)
+    public IEnumerator ApplyConsumableEffectsOverTime(ItemDataConsumable[] effects, int count, float interval)
     {
         for (int i = 0; i < count; i++)
         {
-            foreach (ItemDataConSumable effect in effects)
+            foreach (ItemDataConsumable effect in effects)
             {
                 switch (effect.type)
                 {

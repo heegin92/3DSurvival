@@ -17,7 +17,8 @@ MonoBehaviour:
     3\uD68C \uD68C\uBCF5\uC2DC\uD0B5\uB2C8\uB2E4."
   type: 0
   icon: {fileID: 21300000, guid: f65e40dbfddf96e48b2ab3a99ba19984, type: 3}
-  dropprefab: {fileID: 9047843562241722445, guid: 188cbc9d47ee8f742b73152b6b39ffaa, type: 3}
+  dropPrefab: {fileID: 0}
+  ID: 101
   canStack: 1
   maxStackAmount: 12
   consumables:
