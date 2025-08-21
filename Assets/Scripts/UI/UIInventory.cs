@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class UIInventory : MonoBehaviour
 {
@@ -22,24 +23,32 @@ public class UIInventory : MonoBehaviour
     public GameObject equipButton;
     public GameObject unequipButton;
     public GameObject dropButton;
+    public GameObject placeButton; // Placeable 타입 아이템을 위한 설치 버튼
 
     private PlayerController controller;// 플레이어 컨트롤러 참조
     private PlayerCondition condition; // 플레이어 상태 참조
-    private Inventory playerInventory;
+    public Inventory playerInventory;
+    private PlayerInput playerInput;
 
-    ItemData selectedItem;
+    public bool isPlacingItem = false;
+    public GameObject previewObject;
+
+    public ItemData selectedItem;
     int selectedItemIndex = 0;
 
     int curEquipIndex;
 
     // Start is called before the first frame update
+    void Awake()
+    {
+        playerInventory = CharacterManager.Instance.Player.GetComponent<Inventory>();
+        playerInventory.OnInventoryChanged += UpdateUI;
+    }
     void Start()
     {
         controller = CharacterManager.Instance.Player.controller; // CharacterManager를 통해 플레이어 컨트롤러를 가져옴
         condition = CharacterManager.Instance.Player.condition; // CharacterManager를 통해 플레이어 상태를 가져옴
         dropPosition = CharacterManager.Instance.Player.dropPosition; // 플레이어의 드롭 위치를 가져옴
-
-        controller.inventory = Toggle; // 플레이어 컨트롤러의 inventory 액션에 Toggle 메서드를 할당
 
         playerInventory = CharacterManager.Instance.Player.GetComponent<Inventory>(); // ⭐ 추가: Inventory 컴포넌트를 가져옴
         playerInventory.OnInventoryChanged += UpdateUI; // ⭐ 추가: 이벤트 구독
@@ -47,11 +56,14 @@ public class UIInventory : MonoBehaviour
         inventoryWindow.SetActive(false); // 인벤토리 창을 비활성화
         slots = new ItemSlot[slotPanel.childCount]; // 슬롯 배열 초기화
 
-        for(int i = 0; i < slots.Length; i++)
+        for (int i = 0; i < slots.Length; i++)
         {
             slots[i] = slotPanel.GetChild(i).GetComponent<ItemSlot>(); // 각 슬롯에 ItemSlot 컴포넌트를 할당\
             slots[i].index = i; // 각 슬롯의 인덱스를 설정
             slots[i].inventory = this; // 각 슬롯에 현재 인벤토리 UI를 할당
+
+            // ⭐ ItemSlot의 equipped 변수를 명확하게 false로 초기화
+            slots[i].equipped = false;
         }
 
         ClearSelectedItemWindow(); // 선택된 아이템 창 초기화
@@ -60,7 +72,7 @@ public class UIInventory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void ClearSelectedItemWindow()
@@ -74,17 +86,60 @@ public class UIInventory : MonoBehaviour
         equipButton.SetActive(false); // 장착 버튼 비활성화
         unequipButton.SetActive(false); // 장착 해제 버튼 비활성화
         dropButton.SetActive(false); // 드롭 버튼 비활성화
+        placeButton.SetActive(false); // 설치 버튼 비활성화 (Placeable 타입 아이템을 위해 추가)
     }
 
-    public void Toggle()
+    // ⭐ 설치 모드를 종료하는 함수를 추가
+    public void ExitPlacementMode()
     {
-        if (IsOpen())
+        isPlacingItem = false;
+
+        if (previewObject != null)
         {
-            inventoryWindow.SetActive(false); // 인벤토리 창 닫기
+            Destroy(previewObject);
+            previewObject = null;
         }
-        else
+
+        // 인벤토리 UI를 다시 엽니다.
+        inventoryWindow.SetActive(true);
+
+        // ⭐ Player Input을 다시 활성화하고 커서를 보이게 합니다.
+        playerInput.actions.FindActionMap("Player").Enable();
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+
+    // ⭐ 인벤토리를 토글하는 함수 (Tab 키 입력 전용)
+    public void Toggle(InputAction.CallbackContext context)
+    {
+        Debug.Log("토글 함수가 실행되었습니다.");
+
+        // This line stays the same
+        inventoryWindow.SetActive(!inventoryWindow.activeSelf);
+        ClearSelectedItemWindow();
+
+        // ⭐ Check the current state of the inventory window to decide which code to run.
+        if (inventoryWindow.activeSelf) // 인벤토리가 '이제' 열렸다면
         {
-            inventoryWindow.SetActive(true); // 인벤토리 창 열기
+            Debug.Log("인벤토리가 열립니다. 커서를 보이게 합니다.");
+
+            // 커서를 풀고 보이게 합니다.
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+
+            // Player Input을 비활성화합니다.
+            playerInput.actions.FindActionMap("Player").Disable();
+        }
+        else // 인벤토리가 '이제' 닫혔다면
+        {
+            Debug.Log("인벤토리가 닫힙니다. 커서를 숨깁니다.");
+
+            // 커서를 잠그고 보이지 않게 합니다.
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+
+            // Player Input을 다시 활성화합니다.
+            playerInput.actions.FindActionMap("Player").Enable();
         }
     }
 
@@ -133,6 +188,7 @@ public class UIInventory : MonoBehaviour
         selectedItemName.text = selectedItem.displayName;
         selectedItemDescription.text = selectedItem.description;
 
+        // 능력치 정보 초기화
         selectedStatName.text = string.Empty;
         selectedStatValue.text = string.Empty;
 
@@ -142,9 +198,32 @@ public class UIInventory : MonoBehaviour
             selectedStatValue.text += selectedItem.consumables[i].value.ToString() + "\n";
         }
 
-        useButton.SetActive(selectedItem.type == ItemType.Consumable);
-        equipButton.SetActive(selectedItem.type == ItemType.Equipable && !slots[index].equipped);
-        unequipButton.SetActive(selectedItem.type == ItemType.Equipable && slots[index].equipped);
+        // ⭐ 1. 모든 버튼을 일단 비활성화하여 깨끗한 상태로 만듭니다.
+        useButton.SetActive(false);
+        placeButton.SetActive(false);
+        equipButton.SetActive(false);
+        unequipButton.SetActive(false);
+        dropButton.SetActive(false); // 드롭 버튼도 타입에 따라 제어하는 것이 좋습니다.
+
+        // ⭐ 2. 선택된 아이템의 타입에 따라 필요한 버튼만 활성화합니다.
+        switch (selectedItem.type)
+        {
+            case ItemType.Consumable:
+                useButton.SetActive(true);
+                break;
+            case ItemType.Equipable:
+                equipButton.SetActive(!slots[index].equipped);
+                unequipButton.SetActive(slots[index].equipped);
+                break;
+            case ItemType.Placeable:
+                placeButton.SetActive(true);
+                break;
+            default:
+                // 그 외 타입(CraftingMaterial, Resource 등)은 버튼을 활성화하지 않습니다.
+                break;
+        }
+
+        // 모든 아이템은 드롭할 수 있으므로, 항상 활성화합니다.
         dropButton.SetActive(true);
     }
 
@@ -205,29 +284,25 @@ public class UIInventory : MonoBehaviour
 
         UpdateUI();
     }
-   
+
     public void OnEquipButton()
     {
-        if (slots[curEquipIndex].equipped)
-        {
-            UnEquip(curEquipIndex);
-        }
 
         slots[selectedItemIndex].equipped = true;
         curEquipIndex = selectedItemIndex;
         CharacterManager.Instance.Player.equip.EquipNew(selectedItem);
-        UpdateUI();
 
         SelectItem(selectedItemIndex);
     }
 
     void UnEquip(int index)
     {
+        Debug.Log("UnEquip 함수가 호출되었습니다. 인덱스: " + index);
         slots[index].equipped = false;
         CharacterManager.Instance.Player.equip.UnEquip();
         UpdateUI();
 
-        if(selectedItemIndex == index)
+        if (selectedItemIndex == index)
         {
             SelectItem(selectedItemIndex);
         }
@@ -235,6 +310,40 @@ public class UIInventory : MonoBehaviour
 
     public void OnUnEquipButton()
     {
+        Debug.Log("OnUnequipButton 함수가 호출되었습니다.");
+
         UnEquip(selectedItemIndex);
+    }
+
+    public void OnPlaceButton()
+    {
+        Debug.Log("OnPlaceButton() called");
+
+        if (selectedItem == null || selectedItem.placeablePrefab == null)
+        {
+            Debug.Log("설치할 아이템이 선택되지 않았거나 프리팹이 할당되지 않았습니다.");
+            return;
+        }
+
+        isPlacingItem = true;
+        inventoryWindow.SetActive(false);
+
+        previewObject = Instantiate(selectedItem.placeablePrefab);
+
+        // ⭐ 이 로그가 뜨는지 확인해봐
+        Debug.Log("Preview object instantiated successfully.");
+
+        Rigidbody rb = previewObject.GetComponent<Rigidbody>();
+        if (rb != null)
+        {
+            rb.isKinematic = true;
+        }
+
+        ClearSelectedItemWindow();
+    }
+
+    public bool IsInventoryOpen()
+    {
+        return inventoryWindow.activeSelf;
     }
 }

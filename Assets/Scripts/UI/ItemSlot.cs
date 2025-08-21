@@ -63,6 +63,7 @@ public class ItemSlot : MonoBehaviour
         quantity = 0;
         icon.enabled = false;
         quantityText.enabled = false;
+        equipped = false;
 
         if (outline != null)
         {

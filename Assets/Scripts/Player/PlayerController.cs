@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,9 +9,9 @@ public class PlayerController : MonoBehaviour
     [Header("Movement")]
     public float moveSpeed;
     public float jumpPower;
-    public LayerMask groundLayerMask; //¶¥ ·¹ÀÌ¾î
+    public LayerMask groundLayerMask; //ë•… ë ˆì´ì–´
     private Vector2 curMovementInput;
-    
+
 
     [Header("Look")]
     public Transform cameraContainer;
@@ -20,68 +20,71 @@ public class PlayerController : MonoBehaviour
     public float lookSensitivity;
     private float camCurXRot;
     private Vector2 mouseDelta;
-    public bool canLook = true; //Ä«¸Ş¶ó È¸Àü °¡´É ¿©ºÎ
+    public bool canLook = true; //ì¹´ë©”ë¼ íšŒì „ ê°€ëŠ¥ ì—¬ë¶€
 
     public Action inventory;
     private Rigidbody _rigidbody;
 
     public PlayerCondition condition;
+    public UIInventory uiInventory;
 
-    private void Awake() //°´Ã¼°¡ »ı¼ºµÈ ÈÄ °¡Àå ¸ÕÀú, ÇÑ ¹ø¸¸ ½ÇÇàµÇ¾î¾ß ÇÏ´Â ÃÊ±âÈ­ ÀÛ¾÷
+    private void Awake() //ê°ì²´ê°€ ìƒì„±ëœ í›„ ê°€ì¥ ë¨¼ì €, í•œ ë²ˆë§Œ ì‹¤í–‰ë˜ì–´ì•¼ í•˜ëŠ” ì´ˆê¸°í™” ì‘ì—…
     {
         _rigidbody = GetComponent<Rigidbody>();
     }
 
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked; //Ä¿¼­ Àá±İ
+        // â­ ì´ ì¤„ì„ ì¶”ê°€í•´ì£¼ì„¸ìš”.
+        Debug.Log("UIInventory is " + uiInventory);
+        Cursor.lockState = CursorLockMode.Locked; //ì»¤ì„œ ì ê¸ˆ
     }
 
     // Update is called once per frame
-    void FixedUpdate() // ¹°¸® ¿¬»êÀº FixedUpdate¿¡¼­ Ã³¸®
+    void FixedUpdate() // ë¬¼ë¦¬ ì—°ì‚°ì€ FixedUpdateì—ì„œ ì²˜ë¦¬
     {
         Move();
     }
 
-    private void LateUpdate() // Ä«¸Ş¶ó È¸ÀüÀº LateUpdate¿¡¼­ Ã³¸®
+    private void LateUpdate() // ì¹´ë©”ë¼ íšŒì „ì€ LateUpdateì—ì„œ ì²˜ë¦¬
     {
-        if ( canLook)
+        if (canLook)
         {
             CameraLook();
         }
-        
+
     }
 
     void Move()
     {
         Vector3 dir = transform.forward * curMovementInput.y + transform.right * curMovementInput.x;
         dir *= moveSpeed;
-        dir.y =_rigidbody.velocity.y; //ÇöÀç ¼ÓµµÀÇ y°ªÀ» À¯Áö
+        dir.y = _rigidbody.velocity.y; //í˜„ì¬ ì†ë„ì˜ yê°’ì„ ìœ ì§€
 
-        _rigidbody.velocity = dir; //¼Óµµ ¼³Á¤
+        _rigidbody.velocity = dir; //ì†ë„ ì„¤ì •
     }
 
     void CameraLook()
     {
         camCurXRot += mouseDelta.y * lookSensitivity;
-        camCurXRot = Mathf.Clamp(camCurXRot, minXLook, maxXLook); //Å¬·¥ÇÁ ÃÖ¼Ò°ª¿¡¼± ÃÖ¼Ò°ª ¹İÈ¯ ÃÖ´ë°ª¿¡¼± ÃÖ´ë°ª ¹İÈ¯
+        camCurXRot = Mathf.Clamp(camCurXRot, minXLook, maxXLook); //í´ë¨í”„ ìµœì†Œê°’ì—ì„  ìµœì†Œê°’ ë°˜í™˜ ìµœëŒ€ê°’ì—ì„  ìµœëŒ€ê°’ ë°˜í™˜
         cameraContainer.localEulerAngles = new Vector3(-camCurXRot, 0, 0);
 
-        transform.eulerAngles += new Vector3(0, mouseDelta.x * lookSensitivity, 0); //yÃà È¸Àü
+        transform.eulerAngles += new Vector3(0, mouseDelta.x * lookSensitivity, 0); //yì¶• íšŒì „
     }
 
     public void OnMove(InputAction.CallbackContext context)
     {
-        if(context.phase == InputActionPhase.Performed)
+        if (context.phase == InputActionPhase.Performed)
         {
             curMovementInput = context.ReadValue<Vector2>();
         }
-        else if(context.phase == InputActionPhase.Canceled)
+        else if (context.phase == InputActionPhase.Canceled)
         {
             curMovementInput = Vector2.zero;
         }
     }
-    
+
     public void OnLook(InputAction.CallbackContext context)
     {
         if (context.phase == InputActionPhase.Performed)
@@ -95,7 +98,7 @@ public class PlayerController : MonoBehaviour
         if (context.phase == InputActionPhase.Started && IsGrounded())
         {
 
-                _rigidbody.AddForce(Vector2.up * jumpPower, ForceMode.Impulse); //À§·Î ÈûÀ» °¡ÇÔ
+            _rigidbody.AddForce(Vector2.up * jumpPower, ForceMode.Impulse); //ìœ„ë¡œ í˜ì„ ê°€í•¨
         }
     }
 
@@ -103,7 +106,7 @@ public class PlayerController : MonoBehaviour
     {
         Ray[] rays = new Ray[4]
         {
-            new Ray(transform.position + (transform.forward * 0.2f) + transform.up*0.01f, Vector3.down), //À§¿¡¼­ ¾Æ·¡·Î ·¹ÀÌ ½î±â
+            new Ray(transform.position + (transform.forward * 0.2f) + transform.up*0.01f, Vector3.down), //ìœ„ì—ì„œ ì•„ë˜ë¡œ ë ˆì´ ì˜ê¸°
             new Ray(transform.position + (-transform.forward * 0.2f) + transform.up * 0.01f, Vector3.down),
             new Ray(transform.position + (transform.right * 0.2f) + transform.up * 0.01f, Vector3.down),
             new Ray(transform.position + (-transform.right * 0.2f) + transform.up * 0.01f, Vector3.down)
@@ -113,26 +116,28 @@ public class PlayerController : MonoBehaviour
         {
             if (Physics.Raycast(rays[i], 0.1f, groundLayerMask))
             {
-                               return true; //·¹ÀÌ°¡ ¶¥¿¡ ´êÀ¸¸é true ¹İÈ¯
+                return true; //ë ˆì´ê°€ ë•…ì— ë‹¿ìœ¼ë©´ true ë°˜í™˜
             }
         }
-        return false; //·¹ÀÌ°¡ ¶¥¿¡ ´êÁö ¾ÊÀ¸¸é false ¹İÈ¯
+        return false; //ë ˆì´ê°€ ë•…ì— ë‹¿ì§€ ì•Šìœ¼ë©´ false ë°˜í™˜
     }
 
     public void OnInventory(InputAction.CallbackContext context)
     {
         if (context.phase == InputActionPhase.Started)
         {
-           inventory?.Invoke(); //ÀÎº¥Åä¸® ¾×¼ÇÀÌ È£ÃâµÇ¸é inventory µ¨¸®°ÔÀÌÆ®¸¦ ½ÇÇà
-            ToggleCursor(); //Ä¿¼­ Àá±İ »óÅÂ¸¦ Åä±Û
+            // â­ ì¸ë²¤í† ë¦¬ í† ê¸€ì€ UIInventory ìŠ¤í¬ë¦½íŠ¸ê°€ ë‹´ë‹¹í•˜ë¯€ë¡œ
+            // ë°”ë¡œ í•´ë‹¹ ìŠ¤í¬ë¦½íŠ¸ì˜ Toggle í•¨ìˆ˜ë¥¼ í˜¸ì¶œí•©ë‹ˆë‹¤.
+            uiInventory.Toggle(context);
         }
     }
-
-    void ToggleCursor()
-    {
-        bool toggle = Cursor.lockState == CursorLockMode.Locked; //Ä¿¼­°¡ Àá°ÜÀÖ´ÂÁö È®ÀÎ
-        Cursor.lockState = toggle ? CursorLockMode.None : CursorLockMode.Locked; //Ä¿¼­¸¦ Àá±×°Å³ª ÇØÁ¦
-        canLook = !toggle; //Ä¿¼­ Àá±İ »óÅÂ¿¡ µû¶ó Ä«¸Ş¶ó È¸Àü °¡´É ¿©ºÎ º¯°æ
-    }
-
 }
+
+//    void ToggleCursor()
+//    {
+//        bool toggle = Cursor.lockState == CursorLockMode.Locked; //ì»¤ì„œê°€ ì ê²¨ìˆëŠ”ì§€ í™•ì¸
+//        Cursor.lockState = toggle ? CursorLockMode.None : CursorLockMode.Locked; //ì»¤ì„œë¥¼ ì ê·¸ê±°ë‚˜ í•´ì œ
+//        canLook = !toggle; //ì»¤ì„œ ì ê¸ˆ ìƒíƒœì— ë”°ë¼ ì¹´ë©”ë¼ íšŒì „ ê°€ëŠ¥ ì—¬ë¶€ ë³€ê²½
+//    }
+
+//}

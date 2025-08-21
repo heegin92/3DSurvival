@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6158393894090362093}
   - component: {fileID: 1399358867585864194}
   - component: {fileID: 4193160875141295510}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WoodFence1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 9172056125761218276}
   - component: {fileID: 2653447010201974417}
   - component: {fileID: 8904141924974154295}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Item_WoodFence
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -161,7 +161,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 525074923839925238}
   - component: {fileID: 6072472613404483302}
   - component: {fileID: 7656195654210350535}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Ax_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 2085397787769614789}
   - component: {fileID: 7288283597037487192}
   - component: {fileID: 2144451916673773388}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Item_Ax
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -179,3 +179,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: f25aa9fc99084514180f8b6f329816a9, type: 2}
+  amount: 1
