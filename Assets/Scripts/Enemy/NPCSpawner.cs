@@ -50,8 +50,16 @@ public class NPCSpawner : MonoBehaviour
             return;
         }
 
-        int randomPointIndex = Random.Range(0, spawnPoints.Length);
-        currentNPC = Instantiate(npcPrefab, spawnPoints[randomPointIndex].position, spawnPoints[randomPointIndex].rotation);
-        Debug.Log("새로운 NPC가 생성되었습니다.");
+        // 몬스터를 3마리 생성하도록 for 루프를 사용합니다.
+        for (int i = 0; i < 3; i++)
+        {
+            int randomPointIndex = Random.Range(0, spawnPoints.Length);
+            Instantiate(npcPrefab, spawnPoints[randomPointIndex].position, spawnPoints[randomPointIndex].rotation);
+            Debug.Log("새로운 NPC가 생성되었습니다.");
+        }
+
+        //int randomPointIndex = Random.Range(0, spawnPoints.Length);
+       // currentNPC = Instantiate(npcPrefab, spawnPoints[randomPointIndex].position, spawnPoints[randomPointIndex].rotation);
+        //Debug.Log("새로운 NPC가 생성되었습니다.");
     }
 }

@@ -105,8 +105,10 @@ public class UIInventory : MonoBehaviour
 
         // ⭐ Player Input을 다시 활성화하고 커서를 보이게 합니다.
         playerInput.actions.FindActionMap("Player").Enable();
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.lockState = CursorLockMode.None;
+        //Cursor.visible = true;
     }
 
     // ⭐ 인벤토리를 토글하는 함수 (Tab 키 입력 전용)

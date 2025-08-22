@@ -499,19 +499,7 @@ MonoBehaviour:
     m_ActionId: f0d5e4a2-11bb-4db6-ba50-9b57c2662567
     m_ActionName: Player/Rotate[/Keyboard/r]
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UIInventory, Assembly-CSharp
-        m_MethodName: ExitPlacementMode
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: 80e553d0-bfb8-4169-893a-9d17d0d036ff
     m_ActionName: Player/Exit[/Keyboard/escape]
   m_NeverAutoSwitchControlSchemes: 0
@@ -559,6 +547,7 @@ MonoBehaviour:
   lookSensitivity: 0.05
   canLook: 1
   condition: {fileID: 0}
+  uiInventory: {fileID: 0}
 --- !u!114 &8861009072365501958
 MonoBehaviour:
   m_ObjectHideFlags: 0
