@@ -235,9 +235,6 @@ public class UIInventory : MonoBehaviour
         {
             if (selectedItem.isCoroutine) // 코루틴 아이템인지 확인
             {
-                // 코루틴 시작 전 로그
-                Debug.Log($"코루틴 회복 아이템 사용! {selectedItem.displayName} 효과 시작.");
-
                 // ApplyConsumableEffectsOverTime 코루틴을 시작하고, 
                 // 아이템의 모든 효과 배열을 전달
                 StartCoroutine(condition.ApplyConsumableEffectsOverTime(
@@ -257,6 +254,9 @@ public class UIInventory : MonoBehaviour
                             break;
                         case ConsumableType.Hunger:
                             condition.Eat(selectedItem.consumables[i].value);
+                            break;
+                        case ConsumableType.Water:
+                            condition.AddWater(selectedItem.consumables[i].value);
                             break;
                     }
                 }

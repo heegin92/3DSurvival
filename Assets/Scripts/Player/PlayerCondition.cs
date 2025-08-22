@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -32,7 +32,7 @@ public class PlayerCondition : MonoBehaviour, IDamageable
 
     public event Action<float, float> OnHealthChanged;
     public event Action<float, float> OnHungerChanged;
-    public event Action<float, float> OnWanterChanged;
+    public event Action<float, float> OnWaterChanged;
 
     // Update is called once per frame
 
@@ -45,7 +45,7 @@ public class PlayerCondition : MonoBehaviour, IDamageable
 
         OnHealthChanged?.Invoke(currentHealth, maxHealth);
         OnHungerChanged?.Invoke(currentHunger, maxHunger);
-        OnWanterChanged?.Invoke(currentWater, maxWater);
+        OnWaterChanged?.Invoke(currentWater, maxWater);
     }
     void Update()
     {
@@ -78,18 +78,18 @@ public class PlayerCondition : MonoBehaviour, IDamageable
                 switch (effect.type)
                 {
                     case ConsumableType.Health:
-                        // health ��ũ��Ʈ�� Add �Լ� ȣ��
+                        // health 스크립트의 Add 함수 호출
                         health.Add(effect.value);
                         break;
 
                     case ConsumableType.Hunger:
-                        // hunger ��ũ��Ʈ�� Add �Լ� ȣ��
+                        // hunger 스크립트의 Add 함수 호출
                         hunger.Add(effect.value);
                         break;
 
                     case ConsumableType.Water:
-                        // water ��ũ��Ʈ�� Add �Լ� ȣ��
-                        hunger.Add(effect.value);
+                        // water 스크립트의 Add 함수 호출
+                        water.Add(effect.value);
                         break;
                 }
             }
@@ -97,8 +97,12 @@ public class PlayerCondition : MonoBehaviour, IDamageable
         }
     }
 
-
-
+    // ⭐ 물을 추가하는 함수를 새로 만들고 이 함수에서 이벤트를 호출합니다.
+    public void AddWater(float amount)
+    {
+        water.Add(amount);
+        OnWaterChanged?.Invoke(water.curValue, water.maxValue);
+    }
 
     public void Health(float amount)
     {
